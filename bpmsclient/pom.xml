@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.redhat.techday</groupId>
   <artifactId>bpms-client</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>1.0.0</version>
   <name>BPMS Client</name>
   <description>Provides a REST client and Camel Component interface to BPMS via an EAP module and switchyard extension</description>
 
