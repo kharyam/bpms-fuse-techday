@@ -1,0 +1,4 @@
+batch
+module add --name=gov.anl.bpmsclient --resources=${project.build.directory}/bpmsclient.jar:${bpms.module.classpath} --dependencies=org.apache.httpcomponents,org.slf4j,org.jboss.as.jaxrs,org.codehaus.jackson.jackson-mapper-asl,org.apache.camel.core,javaee.api,org.jboss.resteasy.resteasy-jaxrs
+/subsystem=switchyard/extension=gov.anl.bpmsclient:add(identifier=gov.anl.bpmsclient)
+run-batch

@@ -1,0 +1,4 @@
+batch
+/subsystem=switchyard/extension=gov.anl.bpmsclient:remove()
+module remove --name=gov.anl.bpmsclient
+run-batch
