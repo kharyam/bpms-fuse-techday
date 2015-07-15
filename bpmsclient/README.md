@@ -1,28 +1,24 @@
 # BPMS Java/Camel Client
 
-## Red Hat Fuse Service Works Configuration
+## Red Hat BPMS Configuration
 ### Module Installation
-1. Update $FSW_HOME/modules/system/layers/soa/org/drools/main/module.xml by adding the following module:
+1. Update the pom by setting the <localRepoProperty> parameter to the location of the .m2/repository location of the target system.
 
-    <module name="javax.enterprise.api"/>
+2. Make sure JBOSS_HOME is set properly. Modify install.sh for your environment, it performs the following steps:
 
-2. Update the pom by setting the <localRepoProperty> parameter to the location of the .m2/repository location of the target system.
-
-3. Make sure JBOSS_HOME is set properly. Modify install.sh for your environment, it performs the following steps:
-
-4. Build using:
+3. Build using:
 
     mvn clean install
 
 on the target system.
 
-5. Change directory to target/scripts
+4. Change directory to target/scripts
 
-6. Update installmodule.cli with the location above
+5. Update installmodule.cli with the location above
 
-7. Run the script using the jboss CLI: *$JBOSS_HOME*/bin/jboss-cli.sh -c --file=installmodule.cli 
+6. Run the script using the jboss CLI: *$JBOSS_HOME*/bin/jboss-cli.sh -c --file=installmodule.cli 
 
-8. Restart FSW
+7. Restart BPMS
 
 **Note - if there is a certificate error, select P to accept the certificate and rerun the script**
  
@@ -30,24 +26,6 @@ on the target system.
 1. Run the script using the jboss CLI: *$JBOSS_HOME*/bin/jboss-cli.sh -c --file=removemodule.cli
 
 ## Usage
-### Camel component in Fuse Service Works
-
-BPMS process variables can be set in the header, in this case firstName and lastName are being set, prefixed with var_:
-
-    <setHeader headerName="var_firstName">
-      <simple>${body.firstName}</simple>
-    </setHeader>
-      <setHeader headerName="var_lastName">
-      <simple>${body.lastName}</simple>
-    </setHeader>
-  
-    <to uri="switchyard://BpmsCamelService"/>
-
-Create "BpmsCamelService" reference with camel binding, uri set to:
-
-    bpms://startProcess?baseUrl=http://localhost:18080/business-central&deploymentId=com.redhat:Workshop:1.0&username=bpmsAdmin&password=your_password&processId=Workshop.Workshop
-
-**remember to add the CamelContextMapper class to the camel reference otherwise headers don't propagate!**
 
 ### Standalone camel
 The above technique can be used, replacing:
@@ -79,7 +57,7 @@ If you would like to pass the camel message payload (e.g., a Java object) into t
       "bpmsAdmin",
       "your_password");
 		
-      Map<String, String> processVariables = new HashMap<String,String>();
+      Map<String, Object> processVariables = new HashMap<String, Object>();
       processVariables.put("firstName", "John");
       processVariables.put("lastName", "Doe");
       processVariables.put("p_person", personObject);
@@ -90,3 +68,22 @@ If you would like to pass the camel message payload (e.g., a Java object) into t
       } else {
         // Process was started successfully
       }
+
+### Camel component in Fuse Service Works
+
+BPMS process variables can be set in the header, in this case firstName and lastName are being set, prefixed with var_:
+
+    <setHeader headerName="var_firstName">
+      <simple>${body.firstName}</simple>
+    </setHeader>
+      <setHeader headerName="var_lastName">
+      <simple>${body.lastName}</simple>
+    </setHeader>
+  
+    <to uri="switchyard://BpmsCamelService"/>
+
+Create "BpmsCamelService" reference with camel binding, uri set to:
+
+    bpms://startProcess?baseUrl=http://localhost:18080/business-central&deploymentId=com.redhat:Workshop:1.0&username=bpmsAdmin&password=your_password&processId=Workshop.Workshop
+
+**remember to add the CamelContextMapper class to the camel reference otherwise headers don't propagate!**

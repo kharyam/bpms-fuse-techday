@@ -17,14 +17,14 @@ import org.slf4j.LoggerFactory;
 
 import com.redhat.techday.bpmclient.BpmsClient;
 
-public class BpmsClientTest {
+public class BpmsClientIT {
 
-	private static final Logger LOGGER = LoggerFactory.getLogger(BpmsClientTest.class);
+	private static final Logger LOGGER = LoggerFactory.getLogger(BpmsClientIT.class);
 
 	@Test
-	@Ignore
+	//@Ignore
 	public void testStartProcess() throws JsonGenerationException, JsonMappingException, IOException {
-		BpmsClient client = new BpmsClient("http://localhost:18080/business-central",
+		BpmsClient client = new BpmsClient("http://localhost:8080/business-central",
 				"com.redhat:Workshop:1.0", 
 				"bpmsAdmin",
 				"p@ssw0rd");
