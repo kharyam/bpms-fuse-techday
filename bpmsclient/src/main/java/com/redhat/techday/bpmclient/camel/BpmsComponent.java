@@ -1,4 +1,4 @@
-package gov.anl.bpmclient.camel;
+package com.redhat.techday.bpmclient.camel;
 
 import java.util.Map;
 

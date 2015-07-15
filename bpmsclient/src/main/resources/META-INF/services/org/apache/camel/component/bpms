@@ -1,1 +1,1 @@
-class=gov.anl.bpmclient.camel.BpmsComponent
+class=com.redhat.techday.bpmclient.camel.BpmsComponent

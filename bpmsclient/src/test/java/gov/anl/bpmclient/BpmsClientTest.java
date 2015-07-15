@@ -15,6 +15,8 @@ import org.kie.api.runtime.process.ProcessInstance;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.redhat.techday.bpmclient.BpmsClient;
+
 public class BpmsClientTest {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(BpmsClientTest.class);
