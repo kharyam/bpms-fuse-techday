@@ -5,11 +5,13 @@ import static org.junit.Assert.assertNotNull;
 import org.codehaus.jackson.map.ObjectMapper;
 import org.codehaus.jackson.map.ObjectWriter;
 import org.junit.Test;
-
-import com.redhat.techday.datamodel.Person;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class PersonTest {
 	
+  private static final Logger LOGGER = LoggerFactory.getLogger(PersonTest.class);
+  
 	@Test
 	public void testPerson() {
 		
@@ -22,7 +24,7 @@ public class PersonTest {
 		String json = convertToJson(person);
 		assertNotNull(json);
 
-		System.out.println(json);
+		LOGGER.info("Person as json: \n"+json);
 	}
 
 	private String convertToJson(Object obj) {
@@ -33,7 +35,7 @@ public class PersonTest {
 		try {
 			json = ow.writeValueAsString(obj);
 		} catch (Exception e) {
-			e.printStackTrace();
+		  LOGGER.error("Failed to convert object to json: ",e);
 		}
 
 		return json;
