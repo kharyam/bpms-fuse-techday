@@ -28,6 +28,12 @@
       <version>${drools.version}</version>
     </dependency>
 
+    <dependency>
+      <groupId>com.redhat.techday</groupId>
+      <artifactId>bpms-client</artifactId>
+      <version>1.0.0</version>
+    </dependency>
+
     <!-- camel -->
     <dependency>
       <groupId>org.apache.camel</groupId>

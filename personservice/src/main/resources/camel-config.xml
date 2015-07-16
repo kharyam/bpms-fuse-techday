@@ -22,9 +22,12 @@
       <to uri="direct:processPerson"/>
     </post>
   </rest>
+  
   <route id="personService">
     <from uri="direct:processPerson"/>
     <log message="Received: ${body}" id="logRequest"/>
+    
+    <to uri="bpms://startProcess?baseUrl=http://localhost:8080/business-central/&amp;deploymentId=com.redhat:PersonProcess:1.0&amp;username=bpmsAdmin&amp;password=p@ssw0rd&amp;processId=PersonProcess.PersonProcess&amp;processVarName=p_person"/>
   </route>
 </camelContext>
 </beans>
