@@ -1,63 +1,31 @@
 $(document).ready(function() {
-	$("#terminate").hide();
-	$("#terminateSync").hide();
-	
-	$("#setCredentials").click(enableButtons);
-	$("#terminate").click(terminate);
-	$("#terminateSync").click(terminateSync);
+	$("#submit").click(submit);
 });
 
-function enableButtons(){
-	var username = $("#username").val();
-	var password = $("#password").val();
-	
-	console.log("Clicked");
-	
-	if (!username || !password) {
-		console.log("hiding");
-		$("#terminate").hide();
-		$("#terminateSync").hide();
-	} else {
-		console.log("showing");
-		$("#terminate").show();
-		$("#terminateSync").show();
-	}
-}
-
-function terminate() {
-	callService('/person/terminate');
-}
-
-function terminateSync() {
-	callService('/person/terminate-sync');
+function submit() {
+	callService('/personService/rest/update');
 }
 
 function callService(serviceUrl, username, password) {
 	var person = {
 		firstName : $("#firstName").val(),
 		lastName : $("#lastName").val(),
-		active : true
+		organization : $("#organization").val(),
+		active :  $("#active").val()=="true"
 	};
 
 	person = JSON.stringify(person);
-
-	var username = $("#username").val();
-	var password = $("#password").val();
 	
 	console.log("DATA: " + person);
 	$.ajax({
-		// url : 'https://jboss-fuse-poc0.it.anl.gov:8443/person/terminate',
 		url : serviceUrl,
 		data : person,
 		dataType : 'json',
 		contentType : 'application/json',
 		type : 'POST',
 		async : true,
-		headers : {
-			"Authorization" : "Basic " + btoa(username + ":" + password)
-		},
 		success : function(data) {
-			alert("Name Submitted to FSW Successfully, response: "
+			alert("Name Submitted Successfully, response: "
 					+ JSON.stringify(data));
 		},
 		error : function(data) {
