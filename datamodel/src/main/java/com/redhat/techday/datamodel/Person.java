@@ -48,7 +48,7 @@ public class Person implements Serializable {
 		this.lastName = lastName;
 	}
 
-	public boolean isActive() {
+	public boolean getActive() {
 		return active;
 	}
 
