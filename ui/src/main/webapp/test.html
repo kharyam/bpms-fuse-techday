@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>FSW / BPMS Proof of Concept</title>
+
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.5.0/bootstrap-table.min.css">
+
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.5.0/bootstrap-table.min.js"></script>
+<script src="test.js"></script>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body role="document">
+
+  <div class="container" role="main">
+    <h1>FSW / BPMS Proof of Concept</h1>
+
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">Employee Form</h3>
+      </div>
+      <div class="panel-body">
+        <form id="modifyItemForm" enctype="application/json">
+          <div class="form-group" role="group">
+            <label for="firstName">First Name </label> <input id="firstName" class="form-control" name="fname"
+              placeholder="Enter employee first name" />
+          </div>
+          <div class="form-group" role="group">
+            <label for="newName">Last Name</label> <input id="lastName" class="form-control" name="lname" placeholder="Enter employee last name" />
+          </div>
+          <div class="modal-footer">
+            <button id="updateCredentials" type="button" class="btn btn-primary" data-toggle="modal" data-target=".credentials">
+              <span class="glyphicon glyphicon-lock"></span> Set Credentials
+            </button>
+            <button id="terminate" type="button" class="btn btn-danger" data-dismiss="modal">
+              <span class="glyphicon glyphicon-user"></span> Terminate (Async)
+            </button>
+            <button id="terminateSync" type="button" class="btn btn-danger" data-dismiss="modal">
+              <span class="glyphicon glyphicon-remove-sign"></span> Terminate (Sync)
+            </button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade credentials" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Authentication Credentials</h3>
+          </div>
+          <div class="panel-body">
+            <div class="form-group" role="group">
+              <label for="username">User Name</label> <input id="username" class="form-control" name="username"
+                placeholder="Enter service username" />
+            </div>
+            <div class="form-group" role="group">
+              <label for="password">Password</label> <input id="password" type="password" class="form-control" name="password"
+                placeholder="Enter service password" />
+            </div>
+            <div class="modal-footer">
+              <button id="setCredentials" type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
