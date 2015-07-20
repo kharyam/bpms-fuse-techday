@@ -9,8 +9,10 @@
   <packaging>war</packaging>
 
   <properties>
+    <!-- Fuse 6.2 Camel version -->
     <camel.version>2.15.1.redhat-620117</camel.version>
-    <slf4j.version>1.7.2</slf4j.version>
+    <slf4j.version>1.7.2.redhat-3</slf4j.version>
+    <spring.version>4.1.4.RELEASE</spring.version>
   </properties>
 
   <dependencies>
@@ -20,6 +22,7 @@
       <version>${project.version}</version>
     </dependency>
 
+    <!-- Custom camel component, for calling BPMS -->
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>bpms-client</artifactId>
@@ -32,11 +35,13 @@
       <artifactId>camel-core</artifactId>
       <version>${camel.version}</version>
     </dependency>
+
     <dependency>
       <groupId>org.apache.camel</groupId>
       <artifactId>camel-spring</artifactId>
       <version>${camel.version}</version>
     </dependency>
+
     <dependency>
       <groupId>org.apache.camel</groupId>
       <artifactId>camel-servlet</artifactId>
@@ -67,6 +72,18 @@
       <version>13.0.1.redhat-2</version>
     </dependency>
 
+    <dependency>
+      <groupId>org.apache.camel</groupId>
+      <artifactId>camel-groovy</artifactId>
+      <version>${camel.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-web</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+
     <!-- test -->
     <dependency>
       <groupId>junit</groupId>
@@ -78,7 +95,7 @@
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-log4j12</artifactId>
-      <version>1.7.2.redhat-3</version>
+      <version>${slf4j.version}}</version>
       <scope>test</scope>
     </dependency>
 

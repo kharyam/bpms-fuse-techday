@@ -24,8 +24,13 @@
   <route id="personService">
     <from uri="direct:processPerson"/>
     <log message="Received: ${body}" id="logRequest"/>
+    <setBody id="toggleActive">
+      <groovy>request.body.active = !request.body.active
+            return request.body
+    </groovy>
+    </setBody>
     <to uri="bpms://startProcess?baseUrl=http://localhost:8080/business-central/&amp;deploymentId=com.redhat:PersonProcess:1.0&amp;username=bpmsAdmin&amp;password=p@ssw0rd&amp;processId=PersonProcess.PersonProcess&amp;processVarName=p_person" id="callBpms"/>
-    <choice id="isSuccess">
+    <choice id="bpmsStatus">
       <when id="success">
         <simple>${body.state} range '0..2'</simple>
         <log message="Successfully started BPMSTerminateEmployeeService process." loggingLevel="INFO" id="logSuccess"/>
