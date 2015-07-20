@@ -1,4 +1,4 @@
-package com.redhat.techday.bpmclient.camel;
+package com.redhat.techday.bpmsclient.camel;
 
 import java.util.HashMap;
 import java.util.Map;

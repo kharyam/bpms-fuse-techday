@@ -1,4 +1,4 @@
-package com.redhat.techday.bpmclient;
+package com.redhat.techday.bpmsclient;
 
 import java.net.MalformedURLException;
 import java.net.URL;

@@ -1,1 +1,1 @@
-class=com.redhat.techday.bpmclient.camel.BpmsComponent
+class=com.redhat.techday.bpmsclient.camel.BpmsComponent
