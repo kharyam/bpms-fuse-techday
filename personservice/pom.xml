@@ -9,10 +9,8 @@
   <packaging>war</packaging>
 
   <properties>
-    <camel.version>2.14.1-redhat-01</camel.version>
+    <camel.version>2.15.1.redhat-620117</camel.version>
     <slf4j.version>1.7.2</slf4j.version>
-    <spring.version>4.1.4.RELEASE</spring.version>
-    <drools.version>6.2.0.Final-redhat-4</drools.version>
   </properties>
 
   <dependencies>
@@ -23,15 +21,9 @@
     </dependency>
 
     <dependency>
-      <groupId>org.drools</groupId>
-      <artifactId>drools-core</artifactId>
-      <version>${drools.version}</version>
-    </dependency>
-
-    <dependency>
-      <groupId>com.redhat.techday</groupId>
+      <groupId>${project.groupId}</groupId>
       <artifactId>bpms-client</artifactId>
-      <version>1.0.0</version>
+      <version>${project.version}</version>
     </dependency>
 
     <!-- camel -->
@@ -52,12 +44,6 @@
     </dependency>
 
     <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-web</artifactId>
-      <version>${spring.version}</version>
-    </dependency>
-
-    <dependency>
       <groupId>org.apache.camel</groupId>
       <artifactId>camel-swagger</artifactId>
       <version>${camel.version}</version>
@@ -75,6 +61,12 @@
       <version>${camel.version}</version>
     </dependency>
 
+    <dependency>
+      <groupId>com.google.guava</groupId>
+      <artifactId>guava</artifactId>
+      <version>13.0.1.redhat-2</version>
+    </dependency>
+
     <!-- test -->
     <dependency>
       <groupId>junit</groupId>
@@ -86,7 +78,7 @@
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-log4j12</artifactId>
-      <version>1.7.2</version>
+      <version>1.7.2.redhat-3</version>
       <scope>test</scope>
     </dependency>
 
