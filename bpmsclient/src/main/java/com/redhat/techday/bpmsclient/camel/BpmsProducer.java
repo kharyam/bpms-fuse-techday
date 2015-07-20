@@ -1,4 +1,4 @@
-package com.redhat.techday.bpmclient.camel;
+package com.redhat.techday.bpmsclient.camel;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -11,7 +11,7 @@ import org.kie.api.runtime.process.ProcessInstance;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.redhat.techday.bpmclient.BpmsClient;
+import com.redhat.techday.bpmsclient.BpmsClient;
 
 /**
  * This class provides the ability to start a BPMS process from camel.

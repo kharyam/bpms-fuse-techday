@@ -1,4 +1,4 @@
-package gov.anl.bpmclient;
+package com.redhat.techday.bpmsclient;
 
 import static org.junit.Assert.assertNotNull;
 
@@ -15,7 +15,7 @@ import org.kie.api.runtime.process.ProcessInstance;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.redhat.techday.bpmclient.BpmsClient;
+import com.redhat.techday.bpmsclient.BpmsClient;
 
 public class BpmsClientIT {
 
