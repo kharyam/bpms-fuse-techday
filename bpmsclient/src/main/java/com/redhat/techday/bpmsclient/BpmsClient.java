@@ -28,7 +28,7 @@ public class BpmsClient {
    * Constructs a new BPMS client.
    * 
    * @param baseUrl
-   *          The url of the BRMS server, e.g., https://mybpmserver.com:8443
+   *          The url of the BRMS server, e.g., https://mybpmserver.com:8443/business-central
    * @param deploymentId
    *          The project deployment id, e.g., com.mycompany:sampleBPMSApp:1.0
    * @param username
