@@ -12,7 +12,7 @@
     <!-- Fuse 6.2 Camel version -->
     <camel.version>2.15.1.redhat-620117</camel.version>
     <slf4j.version>1.7.2.redhat-3</slf4j.version>
-    <spring.version>4.1.4.RELEASE</spring.version>
+    <spring.version>4.1.6.RELEASE</spring.version>
   </properties>
 
   <dependencies>
@@ -70,12 +70,6 @@
       <groupId>com.google.guava</groupId>
       <artifactId>guava</artifactId>
       <version>13.0.1.redhat-2</version>
-    </dependency>
-
-    <dependency>
-      <groupId>org.apache.camel</groupId>
-      <artifactId>camel-groovy</artifactId>
-      <version>${camel.version}</version>
     </dependency>
 
     <dependency>
