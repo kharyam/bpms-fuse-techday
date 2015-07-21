@@ -5,7 +5,7 @@
  2. Select **Authoring** -> **Administration**
  3. Select **Organizational Units** -> **Manage Organizational Units**
  4. Click the **Add** button
- 5. Fill out the form as below and click **ok**
+ 5. Fill out the form as below and click **Ok**
 
   ![New Org Unit](images/orgunit.png)
 
@@ -24,7 +24,7 @@
 
  The techday repository should now be selected as well.
 
- 3. Select **New Item** -> **Project** and set the project name to **project**, select **ok**
+ 3. Select **New Item** -> **Project** and set the project name to **project**, select **Ok**
  4. Accept the default Group, Artifact and Version, select **Finish**
 
  ![Default GAV](images/defaultgav.png)
@@ -214,7 +214,7 @@ The process will take as input a Person object. If the active attribute of the p
    ![Generate all forms](images/generateallforms.png)
 
 49. Save the project (**Open Project Editor** button, then **save** button)
-50. Select **Build & Deploy**
+50. Select **Build** -> **Build & Deploy**
 
     ![Build & Deploy](images/buildanddeploy.png)
 
