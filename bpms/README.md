@@ -7,7 +7,7 @@
  4. Click the **Add** button
  5. Fill out the form as below and click **ok**
 
-  <img src="images/orgunit.png" alt="New Organizational Unit" style="border: 2px solid black" />
+  ![New Org Unit](images/orgunit.png)
 
  6. Select **Repositories** -> **New Repository**
  7. Fill out the form as below and click **Finish**
