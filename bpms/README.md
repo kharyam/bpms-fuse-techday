@@ -16,7 +16,7 @@
 
 ## Create a new BPMS project
  1. Select **Authoring**->**Project Authoring**
- 2. Under **Project Explorer** click the down arrow next to ***example*** to change organizational units to **redhat**:
+ 2. Under **Project Explorer** click the down arrow next to ***example*** to change organizational unit to **redhat**:
 
  ![Change Org Unit](images/changeorgunit.png)
 
@@ -28,7 +28,7 @@
  ![Default GAV](images/defaultgav.png)
 
 ## Upload the datamodel jar file
-Our process will used the Person object contained in the maven datamodel project. We will upload it to BPMS to make it available to the process.
+Our process will use the Person object contained in the maven datamodel project. We will upload it to BPMS to make it available to the process.
 
 1. In JBoss Developer Studio, right click the datamodel folder and select **Run As** -> **Maven install**
 
@@ -75,7 +75,7 @@ Our process will used the Person object contained in the maven datamodel project
 
 Two options are provided below for creating the BPMS process. The first option is to manually create the process. This is the preferred approach as it will give you an introduction to BPMS process authoring. If there is a time constraint, the already completed process (PersonProcess.bpmn2) may be uploaded to business Central.
 
-The process will take as input a Person object. If the active attribute of the person is set to true, the the person is simply logged.  If the active attribute is set to false, then a human task will be started.  The human task will allow a buisiness user to modify the attributes of the person.  Afterwards, the person object will be logged.  The completed task should look similar to the following:
+The process will take as input a Person object. If the active attribute of the person is set to true, then the person is simply logged.  If the active attribute is set to false, then a human task will be started.  The human task will allow a buisiness user to modify the attributes of the person.  Afterwards, the person object will be logged.  The completed task should look similar to the following:
 
  ![Complete Process](images/completeprocess.png)
 
@@ -218,6 +218,9 @@ The process will take as input a Person object. If the active attribute of the p
 
 
 ### Uploading an existing process
+
+Rather than creating the process from scratch, you can upload a working process that was created in advance:
+
 1. Select **New Item** -> **Uploaded File**
 2. Set the **Uploaded File** name to ***PersonProcess.bpmn2***
 3. Change the package to ***com.redhat.techday***
