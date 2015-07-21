@@ -1,4 +1,4 @@
-# Creating the BPMS process in Business Central
+# Creating the BPMS Process in Business Central
 
 ## Create a New Repository
  1. Login to [Business Central](http://localhost:8080/business-central)
@@ -14,7 +14,7 @@
 
   ![New Repository](images/repository.png)
 
-## Create a new BPMS project
+## Create a New BPMS Project
  1. Select **Authoring**->**Project Authoring**
  2. Under **Project Explorer** click the down arrow next to ***example*** to change organizational unit to **redhat**:
 
@@ -50,7 +50,7 @@ Our process will use the Person object contained in the maven datamodel project.
 
   ![Uploaded Artifact](images/artifactupload.png)
 
-## Add the datamodel to the project's dependencies
+## Add the datamodel to the Project's Dependencies
 1. Select **Authoring** -> **Project Authoring**
 2. Select the small arrow to the right of **example** and choose **redhat**
  ![Change Org Unit](images/changeorgunit.png)
@@ -70,7 +70,7 @@ Our process will use the Person object contained in the maven datamodel project.
   ![Save Project](images/saveproject.png)
 
 
-## Create the process
+## Create the Process
 
 
 Two options are provided below for creating the BPMS process. The first option is to manually create the process. This is the preferred approach as it will give you an introduction to BPMS process authoring. If there is a time constraint, the already completed process (PersonProcess.bpmn2) may be uploaded to business Central.
@@ -79,7 +79,7 @@ The process will take as input a Person object. If the active attribute of the p
 
  ![Complete Process](images/completeprocess.png)
 
-### Creating the process from scratch
+### Option 1: Creating the Process from Scratch
 1. Select **New Item** -> **Business Process**
 2. Name the process **PersonProcess** with a package of **com.redhat.techday** and click **Ok**
 
@@ -217,7 +217,7 @@ The process will take as input a Person object. If the active attribute of the p
     ![Build & Deploy](images/buildanddeploy.png)
 
 
-### Uploading an existing process
+### Option 2: Uploading the Already Completed Process
 
 Rather than creating the process from scratch, you can upload a working process that was created in advance:
 
@@ -236,7 +236,7 @@ Rather than creating the process from scratch, you can upload a working process 
 
   ![Build & Deploy](images/buildanddeploy.png)
 
-## Testing the process
+## Testing the Process
 1. Select **Process Management** -> **Process Definitions**
 2. Click the start button next to the process
 
