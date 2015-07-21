@@ -1,6 +1,6 @@
 # Creating the BPMS Process in Business Central
 
-## Create a New Repository
+## Create a New Organizational Unit
  1. Login to [Business Central](http://localhost:8080/business-central)
  2. Select **Authoring** -> **Administration**
  3. Select **Organizational Units** -> **Manage Organizational Units**
@@ -9,8 +9,10 @@
 
   ![New Org Unit](images/orgunit.png)
 
- 6. Select **Repositories** -> **New Repository**
- 7. Fill out the form as below and click **Finish**
+
+## Create a New Repository
+ 1. Select **Repositories** -> **New Repository**
+ 2. Fill out the form as below and click **Finish**
 
   ![New Repository](images/repository.png)
 
