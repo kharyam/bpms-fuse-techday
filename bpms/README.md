@@ -79,7 +79,7 @@ The process will take as input a Person object. If the active attribute of the p
 
  ![Complete Process](images/completeprocess.png)
 
-### Creating the process from scratch
+### Option 1: Creating the process from scratch
 1. Select **New Item** -> **Business Process**
 2. Name the process **PersonProcess** with a package of **com.redhat.techday** and click **Ok**
 
@@ -217,7 +217,7 @@ The process will take as input a Person object. If the active attribute of the p
     ![Build & Deploy](images/buildanddeploy.png)
 
 
-### Uploading an existing process
+### Option 2: Uploading the Completed Process
 
 Rather than creating the process from scratch, you can upload a working process that was created in advance:
 
