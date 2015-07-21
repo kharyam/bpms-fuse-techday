@@ -22,7 +22,7 @@ public class BpmsClientIT {
 	private static final Logger LOGGER = LoggerFactory.getLogger(BpmsClientIT.class);
 
 	@Test
-	//@Ignore
+	@Ignore
 	public void testStartProcess() throws JsonGenerationException, JsonMappingException, IOException {
 		BpmsClient client = new BpmsClient("http://localhost:8080/business-central",
 				"com.redhat:Workshop:1.0", 
