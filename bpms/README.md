@@ -7,7 +7,7 @@
  4. Click the **Add** button
  5. Fill out the form as below and click **ok**
 
-  ![New Org Unit](images/orgunit.png)
+  <img src="images/orgunit.png" alt="New Organizational Unit" style="border: 2px solid black" />
 
  6. Select **Repositories** -> **New Repository**
  7. Fill out the form as below and click **Finish**
@@ -250,6 +250,6 @@ Rather than creating the process from scratch, you can upload a working process 
 5. There should be a ***Human Task*** in the list, click it. The parameters you entered should appear
 6. In the **Work** tab, click the **Start** button
 7. Modify some of the parameters then click the **Complete** button
-8. The person details should be logged in the **Console** tab of JBoss Developer Studio:
+8. The person details should be logged in the **Console** tab of JBoss Developer Studio (Assuming BPMS was started via JBDS):
 
         15:31:43,615 INFO  [stdout] (http-localhost/127.0.0.1:8080-3) Processed Person [firstName=Joe, lastName=Doe, active=false, organization=Org]
