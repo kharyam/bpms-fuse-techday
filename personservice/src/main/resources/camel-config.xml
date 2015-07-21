@@ -24,15 +24,15 @@
   <route id="personService">
     <from uri="direct:processPerson"/>
     <log message="Received: ${body}" id="logRequest"/>
-    <to uri="bpms://startProcess?baseUrl=http://localhost:8080/business-central/&amp;deploymentId=com.redhat:PersonProcess:1.0&amp;username=bpmsAdmin&amp;password=p@ssw0rd&amp;processId=PersonProcess.PersonProcess&amp;processVarName=p_person" id="callBpms"/>
+    <to uri="bpms://startProcess?baseUrl=http://localhost:8080/business-central/&amp;deploymentId=com.redhat.techday:project:1.0&amp;username=bpmsAdmin&amp;password=p@ssw0rd&amp;processId=project.PersonProcess&amp;processVarName=p_person" id="callBpms"/>
     <choice id="bpmsStatus">
       <when id="success">
         <simple>${body.state} range '0..2'</simple>
-        <log message="Successfully started BPMSTerminateEmployeeService process." loggingLevel="INFO" id="logSuccess"/>
+        <log message="Successfully started BPMS process." loggingLevel="INFO" id="logSuccess"/>
         <log message="Response: ${body}" loggingLevel="DEBUG" id="logBpmsResponse"/>
       </when>
       <otherwise id="failure">
-        <log message="Failed to start BPMSTerminateEmployeeService process. Response: ${body}" loggingLevel="ERROR" id="logFailure"/>
+        <log message="Failed to start BPMS process. Response: ${body}" loggingLevel="ERROR" id="logFailure"/>
       </otherwise>
     </choice>
   </route>

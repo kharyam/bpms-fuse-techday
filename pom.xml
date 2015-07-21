@@ -11,5 +11,6 @@
     <module>bpmsclient</module>
     <module>datamodel</module>
     <module>personservice</module>
+    <module>ui</module>
   </modules>
 </project>
