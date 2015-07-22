@@ -10,10 +10,15 @@ This camel route uses a relatively new feature in camel - the Rest DSL.  This al
 
 1. in Jboss Developer Studio, open ***personservice/src/main/resources/camel-config.xml*** and select the **Source** tab, at the bottom of the view.
 
-2. Replace the **&lt;rest id="Update_Me"/&gt;** tag in the camel route with the following xml:
+2. Replace
 
   ```xml
+    <rest id="Update_Me"/>
+  ```
 
+  with the following:
+
+  ```xml
   <rest path="/update">
     <post consumes="application/json" produces="application/json" type="com.redhat.techday.datamodel.Person">
       <to uri="direct:processPerson"/>
@@ -28,12 +33,17 @@ Note that this creates a rest endpoint (/update) that consumes / produces json a
 ## Configure the BPMS call
 This camel route uses a custom camel component (defined in the bpms-client project) to call the BPMN process on BPMS 6.1. Update the camel route to call the BPMN process properly.
 
-1. Replace **&lt;to uri="bpms://startProcess" id="Update_Me_Too"/&gt;** with the following:
+1. Replace
+    ```xml
+    <to uri="bpms://startProcess" id="Update_Me_Too"/>
+    ```
 
-```xml
+     with the following:
 
-<to uri="bpms://startProcess?baseUrl=http://localhost:8080/business-central/&amp;deploymentId=com.redhat.techday:project:1.0&amp;username=bpmsAdmin&amp;password=p@ssw0rd&amp;processId=project.PersonProcess&amp;processVarName=p_person" id="callBpms"/>
+    ```xml
 
-```
+    <to uri="bpms://startProcess?baseUrl=http://localhost:8080/business-central/&amp;deploymentId=com.redhat.techday:project:1.0&amp;username=bpmsAdmin&amp;password=p@ssw0rd&amp;processId=project.PersonProcess&amp;processVarName=p_person" id="callBpms"/>
+
+    ```
 
 2. Update the ***deploymentId, username, password, processId and processVarName*** as necessary.
