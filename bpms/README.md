@@ -135,7 +135,9 @@ The process will take as input a Person object. If the active attribute of the p
 16. With the arrow still selected, click the empty value field next to the Expression property and click the down arrow.
 17. Click the **Script** tab and enter the following java code:
 
-        return !p_person.getActive();
+   ```java
+   return !p_person.getActive();
+   ```
 
   ![Not Active](images/notactive.png)
 
@@ -157,7 +159,9 @@ The process will take as input a Person object. If the active attribute of the p
 24. With the arrow still selected, click the empty value field next to the Expression property and click the down arrow.
 25. Click the **Script** tab and enter the following java code:
 
-        return p_person.getActive();
+  ```java
+  return p_person.getActive();
+  ```
 
 26. Click the **Ok** Button
 27. Select the Gateway on the right. Click the square node icon and drag it to the right.
@@ -170,7 +174,9 @@ The process will take as input a Person object. If the active attribute of the p
 31. On the properties panel, click the empty value field next to the **Script** property, then click the down arrow on the right (similar to step 6)
 32. Enter the following java code to log the Person object:
 
-        System.out.println("Processed " + p_person);
+  ```java
+  System.out.println("Processed " + p_person);
+  ```
 
 33. Click the **Ok** button
 34. Select the ***Log Person*** node and find the small circular node icon to the right:
