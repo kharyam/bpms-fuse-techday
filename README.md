@@ -5,7 +5,7 @@
 
 ## Sub Projects
 ### bpms
-This folder contains a completed BPMS process that can be uploaded to business central. It also contains a lab (README.md) describing how to create the BPM Process for the workshop.
+This folder contains a completed BPMS process that can be uploaded to business central. It also contains a lab ([bpms/README.md](../bpms/README.md)) describing how to create the BPM Process for the workshop.
 ### bpmsclient
 This maven project implements a custom camel component that can be used to call BPMS processes.
 ### datamodel
