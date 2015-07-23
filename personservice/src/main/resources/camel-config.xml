@@ -16,15 +16,18 @@
   <restConfiguration component="servlet" port="8080" contextPath="/personService/rest" bindingMode="json">
     <dataFormatProperty key="prettyPrint" value="true"/>
   </restConfiguration>
-<rest path="/update">
- <post consumes="application/json" produces="application/json" type="com.redhat.techday.datamodel.Person">
-   <to uri="direct:processPerson"/>
- </post>
-</rest>
+  
+  <!-- Refer to README.md to update the rest DSL below -->
+  <rest id="Update_Me"/>
+  
   <route id="personService">
     <from uri="direct:processPerson"/>
     <log message="Received: ${body}" id="logRequest"/>
-    <to uri="bpms://startProcess?baseUrl=http://localhost:8080/business-central/&amp;deploymentId=com.redhat.techday:project:1.0&amp;username=bpmsAdmin&amp;password=p@ssw0rd&amp;processId=project.PersonProcess&amp;processVarName=p_person" id="callBpms"/>
+    
+    
+    <!-- Refer to README.md to update the BPMS call below -->
+    <to uri="bpms://startProcess" id="Update_Me_Too"/>
+    
     <choice id="bpmsStatus">
       <when id="success">
         <simple>${body.state} range '0..2'</simple>
