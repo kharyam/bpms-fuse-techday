@@ -47,3 +47,21 @@ This camel route uses a custom camel component (defined in the bpms-client proje
     ```
 
 2. Update the ***deploymentId, username, password, processId and processVarName*** as necessary.
+
+## Test the Service
+
+Camel has support for [Swagger](http://swagger.io), which is a web based framework for documenting and testing with web services. The PersonService project has been configured to support Swagger (see the web.xml file for configuration information).
+
+1.  Navigate to http://localhost/ui/personService and click the *Test the service via Swagger* link that will take you to the Swagger UI (embedded in PersonService).
+
+  ![Swagger Link](images/swaggerlink.png)
+
+2. Click the *update* link, which is the name of the rest endpoint that we defined in the camel route. Click the */update* link below it to reveal the POST method
+
+3. Click the JSON block on the right to populate the body of the message. Update the parameters to your liking
+
+  ![JSON Body](images/swaggerjson.png)
+
+4. Click the ***Try it out!*** button to make the post request. Swagger will show you the equivalent curl command, the request url, response body (JSON response from BPMS) and response headers.
+
+  ![JSON Body](images/swaggerresponse.png)
