@@ -96,7 +96,7 @@
   </dependencies>
 
   <build>
-    <finalName>policyService</finalName>
+    <finalName>personService</finalName>
     <plugins>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
