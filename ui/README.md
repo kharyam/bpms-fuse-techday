@@ -68,8 +68,8 @@ The completed javascript file should look as follows:
     	};
 
     	person = JSON.stringify(person);
-
     	console.log("DATA: " + person);
+    	
     	$.ajax({
     		url : serviceUrl,
     		data : person,

@@ -9,7 +9,7 @@
 <!-- START SNIPPET: e1 -->
 <web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
-  <display-name>Camel Decision Server Integration Service</display-name>
+  <display-name>Tech Day BPMS / Fuse Integration Service</display-name>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
   </welcome-file-list>
@@ -35,7 +35,7 @@
     <servlet-class>org.apache.camel.component.swagger.DefaultCamelSwaggerServlet</servlet-class>
     <init-param>
       <param-name>base.path</param-name>
-      <param-value>personService</param-value>
+      <param-value>rest</param-value>
     </init-param>
     <init-param>
       <param-name>api.path</param-name>
@@ -47,11 +47,11 @@
     </init-param>
     <init-param>
       <param-name>api.title</param-name>
-      <param-value>Insurance Policy Services</param-value>
+      <param-value>Tech Day Camel Service</param-value>
     </init-param>
     <init-param>
       <param-name>api.description</param-name>
-      <param-value>Restful web service that submits facts to the BRMS Real Time Decision Server</param-value>
+      <param-value>Restful web service that starts a BPMS process on BPMS 6.1</param-value>
     </init-param>
     <load-on-startup>2</load-on-startup>
   </servlet>
