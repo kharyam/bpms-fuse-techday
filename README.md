@@ -1,5 +1,12 @@
 # Red Hat Tech Day Fuse BPMS Integration Demo
 
+
+## Slides
+[BPMS Overview] (https://docs.google.com/a/redhat.com/presentation/d/1xomewEf58VkqVJxLJm7JHlKe6mYKFFC5aipY6rntwms/edit?usp=sharing)
+[Fuse Overview] (https://docs.google.com/a/redhat.com/presentation/d/1qKKFFf1Iy_LJl_Mzl1q3wZZ8wn0Ue3ZF6ro2OHn94EY/edit?usp=sharing)
+[Real Time Decision Server Demo Slides] (https://docs.google.com/a/redhat.com/presentation/d/1JgqTrfcrV_SxLFMj5rgi1cL3scOG6qJGlhwqVuwpAQs/edit?usp=sharing)
+[Workshop Sides](https://docs.google.com/a/redhat.com/presentation/d/1aWh4tB5n1u1Ng_ycxq-A3IYeuiA1bObTlN6ChZpp1do/edit?usp=sharing)
+
 ## Architecture
 ![Architecture](architecture.png)
 
